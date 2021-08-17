@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Crm Regression suite">
+
+<listeners>
+	<listener class-name="com.crm.util.BaseListener"/>
+</listeners>
+
+  <test name="Crm Create Account Test" verbose="2">
+    <classes>
+      <class name="com.crm.tests.CreateAccountTestScripts"/>
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->

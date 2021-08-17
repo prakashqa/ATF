@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CrmLoginData>
+	<logindata id="set1">
+		<username>admin</username>
+		<password>admin</password>
+		<accountName>Chirsabcd</accountName>
+		<accountEmail>testing@testing.com</accountEmail>
+		<website>www.xyz.com</website>
+		<street>Willam Street</street>
+		<city>NewYork</city>
+		<state>NewJersey</state>
+		<country>USA</country>
+		<zip>123456</zip>
+	</logindata>
+</CrmLoginData>
