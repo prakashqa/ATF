@@ -63,7 +63,6 @@ public class CreateAccountTestScripts {
 	
 	@AfterClass
 	public void tearDown() {
-		//BrowserDriver.getCurrentDriver().quit();
 		extent.flush();
 	}
 	
