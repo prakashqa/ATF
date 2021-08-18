@@ -9,6 +9,7 @@
   <test name="Crm Create Account Test" verbose="2">
     <classes>
       <class name="com.crm.tests.CreateAccountTestScripts"/>
+      <class name="com.crm.tests.AccountTests"/>
     </classes>
   </test> <!-- Default test -->
 </suite> <!-- Default suite -->
