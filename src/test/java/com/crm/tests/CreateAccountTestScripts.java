@@ -68,7 +68,7 @@ public class CreateAccountTestScripts extends BaseListener {
 		
 		//accountValidator.validateAccountName(accountService);
 		
-		accountValidator.validateBillingAddress(accountService);	
+		//accountValidator.validateBillingAddress(accountService);	
 	}
 	
 	@Test(description = "This test case creates account with billing and shipping address", priority=1)

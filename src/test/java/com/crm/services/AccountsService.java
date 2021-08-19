@@ -42,7 +42,7 @@ public class AccountsService {
 	
 	public AccountsService saveTheAccount() throws InterruptedException {
 		accountsPageContainer.getSaveAccount().click();
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		log.info("Account created successfully");
 		return this;
 	}

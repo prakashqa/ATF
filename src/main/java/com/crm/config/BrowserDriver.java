@@ -16,6 +16,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.aventstack.extentreports.model.ScreenCapture;
+
 public class BrowserDriver {
 	
 	private static WebDriver bDriver;
@@ -53,7 +55,7 @@ public class BrowserDriver {
 		select.selectByVisibleText(item);
 	}
 	
-	public static void takeScreenShot() {
+	public static ScreenCapture takeScreenShot() {
 		try {
 			String newFileNamePath;
 			File directory = new File(".");
@@ -69,6 +71,7 @@ public class BrowserDriver {
 			e.printStackTrace();
 			System.out.println("Check the file");
 		}
+		return null;
 		
 	}
 

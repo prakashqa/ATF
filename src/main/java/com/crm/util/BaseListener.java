@@ -1,5 +1,11 @@
 package com.crm.util;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.IClass;
 import org.testng.ITestContext;
@@ -13,6 +19,7 @@ import org.testng.annotations.BeforeTest;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
@@ -38,17 +45,22 @@ public class BaseListener extends TestListenerAdapter {
         extent.setSystemInfo("Environment", "QA");
         extent.setSystemInfo("User Name", "Prakash Testing");
 
-        htmlReporter.config().setDocumentTitle("Crm AutomationTesting Report");
+        htmlReporter.config().setDocumentTitle("Crm Automation Testing Report");
         htmlReporter.config().setReportName("My Own Report");
         htmlReporter.config().setTheme(Theme.DARK);
     }
+   
      
     @AfterMethod
-    public void getResult(ITestResult result)
+    public void getResult(ITestResult result) throws IOException
     {
         if(result.getStatus() == ITestResult.FAILURE)
         {
+        	BrowserDriver.takeScreenShot();
+        	htmlReporter.config().setAutoCreateRelativePathMedia(true);
             test.log(Status.FAIL, MarkupHelper.createLabel(result.getName()+" Test case FAILED due to below issues:", ExtentColor.RED));
+           // test.fail("details", MediaEntityBuilder.createScreenCaptureFromPath("1.png").build());
+           // test.fail("details", MediaEntityBuilder.createScreenCaptureFromPath("2.png").build());
             test.fail(result.getThrowable());
         }
         else if(result.getStatus() == ITestResult.SUCCESS)
