@@ -98,7 +98,6 @@
                 <version>2.22.0</version>
                 <configuration>
 					<suiteXmlFiles>
-						<useSystemClassLoader>false</useSystemClassLoader>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
