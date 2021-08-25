@@ -23,7 +23,6 @@ import com.crm.data.LoginData;
 import com.crm.services.AccountsService;
 import com.crm.services.HomeService;
 import com.crm.services.LoginService;
-import com.crm.util.BaseListener;
 import com.crm.validators.CreateAccountValidators;
 
 public class CreateAccountTestScripts extends BaseListener {
