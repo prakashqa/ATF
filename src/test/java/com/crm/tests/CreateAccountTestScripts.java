@@ -23,10 +23,10 @@ import com.crm.data.LoginData;
 import com.crm.services.AccountsService;
 import com.crm.services.HomeService;
 import com.crm.services.LoginService;
-
+import com.crm.util.BaseListener;
 import com.crm.validators.CreateAccountValidators;
 
-public class CreateAccountTestScripts {//extends BaseListener// 
+public class CreateAccountTestScripts extends BaseListener {
 	
 	LoginService loginService = null;
 	HomeService homeService = null;
@@ -51,7 +51,7 @@ public class CreateAccountTestScripts {//extends BaseListener//
 		
 		BrowserDriver.getCurrentDriver().get(PropertyLoader.getUrl());
 		loginService.loginToApplication(appData.get(0).getUsername(), appData.get(0).getPassword());
-		//test = extent.createTest("Functional Test Cases");
+		test = extent.createTest("Functional Test Cases");
 	}
 
 	
